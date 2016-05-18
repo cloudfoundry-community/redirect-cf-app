@@ -1,4 +1,4 @@
-# Redirect URLs to subdomain to path route
+# Redirect old app to new path route
 
 We previously hosted our blog at https://blog.starkandwayne.com but once Cloud Foundry supported path-based routes we moved it to https://www.starkandwayne.com/blog. That's great, except all the old URLs are being used/stored/documented around on the internets.
 
@@ -11,7 +11,7 @@ It uses the [staticfile buildpack](https://github.com/cloudfoundry/staticfile-bu
 To map any requests sent to `blog.yourcompany.com` to the base URL `https://www.yourcompany.com/blog`:
 
 ```
-cf push redirect-blog-to-path --no-start -n blog -d yourcompany.com
-cf set-env redirect-blog-to-path REDIRECT_URL https://www.yourcompany.com/blog
-cf start redirect-blog-to-path
+cf push redirect-old-blog --no-start -n blog -d yourcompany.com
+cf set-env redirect-old-blog REDIRECT_URL https://www.yourcompany.com/blog
+cf start redirect-old-blog
 ```
