@@ -1,0 +1,7 @@
+---
+applications:
+- name: redirect-blog-to-path
+  memory: 64M
+  instances: 1
+  env:
+    REDIRECT_URL:
