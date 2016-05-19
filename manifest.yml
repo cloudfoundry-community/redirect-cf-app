@@ -3,3 +3,4 @@ applications:
 - name: redirect-cf-app
   memory: 64M
   instances: 1
+  buildpack: staticfile_buildpack
