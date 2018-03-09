@@ -1,6 +1,6 @@
 ---
 applications:
 - name: redirect-cf-app
-  memory: 64M
+  memory: 32M
   instances: 1
   buildpack: staticfile_buildpack
