@@ -11,7 +11,7 @@ It uses the [staticfile buildpack](https://github.com/cloudfoundry/staticfile-bu
 To map any requests sent to `blog.yourcompany.com` to the base URL `https://www.yourcompany.com/blog`:
 
 ```
-cf push redirect-old-blog --no-start -n blog -d yourcompany.com
-cf set-env redirect-old-blog REDIRECT_URL https://www.yourcompany.com/blog
-cf start redirect-old-blog
+cf push redirect-cf-app --no-start -n blog -d yourcompany.com
+cf set-env redirect-cf-app REDIRECT_URL https://www.yourcompany.com/blog
+cf start redirect-cf-app
 ```
