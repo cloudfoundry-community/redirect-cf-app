@@ -1,6 +1,10 @@
 ---
 applications:
-- name: redirect-cf-app
+- name: redirect-videos
   memory: 32M
   instances: 1
-  buildpack: staticfile_buildpack
+  buildpacks:
+  - staticfile_buildpack
+  routes:
+  - route: starkandwayne.com/videos
+  - route: www.starkandwayne.com/videos
